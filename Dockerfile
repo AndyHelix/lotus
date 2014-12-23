@@ -12,6 +12,7 @@ CMD ['gem', '-v']
 CMD ['gem', 'install lotusrb']
 CMD ['locate', 'lotus']
 
-RUN mkdir /src/lotus; cd /src/lotus; lotus new myapp;
+CMD ['cd','/src/lotus']
+CMD ['pwd']
 
-RUN cd /src/lotus/myapp; pwd; ls -l; bundle; bundle exec lotus server
+#RUN cd /src/lotus/myapp; pwd; ls -l; bundle; bundle exec lotus server
