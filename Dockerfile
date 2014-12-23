@@ -8,7 +8,7 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 RUN curl -sSL https://get.rvm.io | bash -s stable --ruby
 #RUN which source
 CMD ['source', '/usr/local/rvm/scripts/rvm']
-RUN gem -v;ruby -v
+CMD ['gem', '-v']
 RUN gem install lotusrb
 
 RUN mkdir /src/lotus; cd /src/lotus; lotus new myapp;
