@@ -9,7 +9,7 @@ RUN curl -sSL https://get.rvm.io | bash -s stable --ruby
 #RUN which source
 CMD ['source', '/usr/local/rvm/scripts/rvm']
 CMD ['gem', '-v']
-RUN gem install lotusrb
+CMD ['gem', 'install lotusrb']
 
 RUN mkdir /src/lotus; cd /src/lotus; lotus new myapp;
 
